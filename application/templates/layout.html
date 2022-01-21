@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Tip/Note: if a section doesn't have a block, it's universal across pages (I think)-->
+<head>
+    <!-- The tab title-->
+    <title>Multi-Use App</title>
+    <!-- links your css file to the webpage -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+
+</head>
+
+
+<!-- Tip/Note: Place the blocks INSIDE head, body, etc -->
+<body>
+    <div class="body-container">
+        
+        {% include "includes/nav.html" %}
+
+        <br>
+        <br>
+      
+        <center>
+            <div class="flash-alerts">
+                {% with messages = get_flashed_messages(with_categories=True) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="alert-{{ category }}">
+                                <p>{{ message }}</p>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+            </div>
+        </center>
+
+        {% block body %}
+        {% endblock %}
+
+    </div>
+</body>
+
+</html>

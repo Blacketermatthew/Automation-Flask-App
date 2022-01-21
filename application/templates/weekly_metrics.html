@@ -1,0 +1,109 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="db-table">
+
+    <!-- Main Text-->
+    <h1 class="maintext">Weekly Metrics</h1>
+    
+
+    <table>
+
+        <thead>
+            <tr class="head-row">
+                <th>Week Start Date</th>
+                <th>ECC Host Incidents</th>
+                <th>Site24x7 Incidents</th>
+                <th>Nagios Incidents</th>
+                <th>1EDI Incidents</th>
+                <th>InfoSec Incidents</th>
+                <th>P1 Incidents</th>
+                <th>Status Page Outages</th>
+                <th>Status Page Performance Degredations</th>
+                <th>Status Page Maintenances</th>
+                <th>Code Changes</th>
+                <th>Total Dailies Alerts</th>
+                <th>Dailies - Affected Servers</th>
+                <th>Dailies - Repeated Problems</th>
+                <th>SolarWinds Incidents</th>
+            </tr>
+        </thead>
+
+        
+        {% if weekly_db %}
+        <tbody>
+            {% for row in weekly_db %}
+
+                <tr class="clickable-row">
+                    <!-- <script>
+                        function openInNewTab(url) {
+                            var win = window.open(url, '_blank');
+                            win.focus(); }
+                    </script> -->
+
+                    <td>
+                        {{ row.WeekOf.strftime('%m-%d-%Y') }}
+                    </td>
+
+                    <td>
+                        {{ row.ECCHostIncidents }}
+                    </td>                    
+                    <td>
+                        {{ row.Site24x7Incidents }}
+                    </td>
+                    <td>
+                        {{ row.NagiosIncidents }}
+                    </td>
+                    <td>
+                        {{ row.EDIIncidents }}
+                    </td>
+                    <td>
+                        {{ row.InfoSecIncidents }}
+                    </td>
+                    <td>
+                        {{ row.P1Incidents }}
+                    </td>
+                    <td>
+                        {{ row.StatusPageOutages }}
+                    </td>
+                    <td>
+                        {{ row.StatusPagePerformanceDegredations }}
+                    </td>
+                    <td>
+                        {{ row.StatusPageMaintenances }}
+                    </td>
+                    <td>
+                        {{ row.CodeChanges }}
+                    </td>
+                    <td>
+                        {{ row.TotalDailiesAlerts }}
+                    </td>
+                    <td>
+                        {{ row.DailiesAffectedServers }}
+                    </td>
+                    <td>
+                        {{ row.DailiesRepeatedProblems }}
+                    </td>
+                    <td>
+                        {{ row.SolarWindsIncidents }}
+                    </td>
+
+                </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% endif %}
+
+    <br>
+    <br>
+    <center>
+        <form class="menu_form" id="left_choice_form" action="{{url_for('export_data')}}" method="POST">
+            <input class="exportbutton" type="submit" name="action" onclick="" value="Export Data">
+        </form>
+    </center>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+<header>
+    <div class="navbar">
+            
+        {% if session['username'] %}
+
+            <a href="{{ url_for('index') }}" 
+                class="nav-link nav-left">Home</a>
+
+            <a href="{{url_for('get_weekly_metrics')}}"
+                class="nav-link nav-left">Weekly Metrics</a>
+
+            <a href="{{ url_for('logout') }}" 
+                class="nav-link nav-right">Logout</a>
+            
+            <a href="{{url_for('test_func')}}"
+                class="nav-link nav-left">Test</a>
+        {% endif %}
+
+    </div>
+</header>

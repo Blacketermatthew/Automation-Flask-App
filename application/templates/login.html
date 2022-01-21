@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<center>
+
+<br>
+
+<div class="login-page">
+
+    <br>
+    <p class="login-title">CRC Login</p>
+    <hr>
+
+    <br>
+    <form name="login" class="login-form" action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+
+        {% for error in form.username.errors %}
+            <br>
+            <span class="error-message">{{ error }}</span>
+        {% endfor %}
+
+        {% for error in form.password.errors %}
+            <br>
+            <span class="error-message">{{ error }}</span>
+        {% endfor %}
+
+        <p class="login-label">Username</p>
+        <!-- {{ form.username.label }}<br> -->
+        {{ form.username(size=25) }}
+        
+        <p class="login-label">Password</p>
+        <!-- {{ form.password.label }}<br> -->
+        {{ form.password(size=25) }}
+
+
+
+        <br>
+
+        <button class="login-btn" type="submit" value="submit-btn">Log In</button>
+
+    </form>
+</div>
+</center>
+
+{% endblock %}

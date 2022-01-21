@@ -1,0 +1,437 @@
+/*
+    NOTE: If css elements aren't showing up or updating in the app, try Ctrl + F5 to hard refresh
+*/
+
+/* ------ MAIN SECTIONS (header, body, footer) ------------------------  */
+
+
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e7e8f0;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.navbar {
+    position: fixed;
+    overflow: hidden;
+    background-color: #5f69ee;
+    border-bottom: solid 3px #474da1;
+    width: 100%;
+    height: 47px;
+}
+
+.nav-link {
+    color: white;
+    background-color: #1d1da3;
+    padding: 10px 10px 0px 10px;
+    height: 37px;
+    border-left: 1px solid #6d6977;
+    text-decoration: none;  /* Used to remove underline and any other decorators  */
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-link:hover { 
+    color : white;
+    background-color:rgb(54, 54, 206);
+}
+
+.nav-left {
+    float: left;
+}
+
+.nav-right {
+    float: right;
+}
+/* .footer {
+    background-color: rgb(252, 252, 195);
+    position: fixed;
+    bottom: 0;
+    border-top: solid 2px rgb(44, 99, 161);
+    width: 100%;
+    height: 35px;
+    font-size: 15px;
+}
+
+.footer p {
+    margin-top: 7px;
+    text-align: center;
+} */
+
+
+
+/* --- INDEX SECTION --------------------------------------------------------------------------------- /
+
+/* --- div for upper half.  Instructions, dropdown and such. ----- */
+div.top-half, div.db-table {
+    height: 200px;
+    margin-top: 50px;
+}
+
+/* --- class on the L M R divs -------------------- */
+.button-section {
+    width: 33.33%;
+}
+
+/* --- div for left lower half of page ---------------------- */
+div.left-side {
+    /* display: grid; */
+    display: block;
+    float: left;
+    
+}
+
+.button-list-title {
+    text-align: center;
+    color: white;
+    text-shadow: black 2px 1px;
+}
+
+#button-list-left {
+    color: white;
+}
+
+/* --- div for right lower half of page -------------------- */
+div.middle-side {
+    /* display: grid; */
+    display: block;
+    float: left;
+}
+
+#button-list-middle {
+    color: white;
+}
+
+div.right-side {
+    /* display: grid; */
+    display: block;
+    float: left;
+}
+
+#button-list-right {
+    color: white;
+}
+
+/* --- div containing left- and right-side.  Below select menu. ----- */
+div.bottom-half {
+    /* background-color: rgb(117, 104, 204); */
+    background-color: #5f69ee;
+    border-top: solid 3px #474da1;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    padding-bottom: 120px;
+    border-collapse: collapse;
+}
+
+
+ /* --- login page ------------------------------------------------------------- */
+.login-page {
+    background-color: #2b2e5c;
+    color: white;
+    width: 40%;
+    height: 450px;
+    border-radius: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.login-title {
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+
+hr {
+    border: 2px solid rgb(255, 255, 151);
+}
+
+.login-label {
+    font-size: 15px;
+    margin-bottom: 0px;
+}
+
+/* --- Username and Password text fields ----------------- */
+input[type=text], input[type=password] {
+    width: 50%;
+    padding: 7px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+.login-form {
+    text-align: center;
+}
+
+.login-btn {
+    width: 175px;
+    height: 35px;
+    background-color: rgb(216, 35, 35);
+    border: 2px solid rgb(202, 21, 21);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.login-btn:hover {
+    opacity: 0.8;
+}
+
+.error-message {
+    font-size: 12px;
+}
+
+
+/* --- Track Database Table --- */
+
+h1.maintext {
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+table {
+    background-color: #3e416d;
+    color: white;
+    overflow-y:scroll;
+    table-layout: fixed;
+    height:400px;
+    display:block;
+    border-collapse:collapse;
+    width: 90%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+.head-row th {
+    background-color: #18204b;
+    color: white;
+    padding: 5px 2px;
+    font-size: 9px;
+    width: auto;
+    height: 45px;
+    text-shadow: 3px 3px 3px #0b4d21;
+    top: 0;
+    position: sticky;
+}
+
+tr:hover {
+    background-color: #e2f882;
+    color: black;
+    outline: none;
+    cursor: pointer;
+  }
+
+td {
+    font-size: 10px;
+    padding: 10px 10px;
+    text-align: center;
+}
+
+/* --- Instructions box--------------------------------------- */
+div.instructions {
+    display: none;
+    border-radius: 15px;
+    border: 1px solid black;
+    background-color: #f0f0f0;
+    padding: 1px 20px;
+    width: 750px;
+    margin: 25px auto;
+    }
+
+.instructions p {
+    font-size: 14px;
+    line-height: 6px;
+ }
+
+ .instructions h5 {
+     line-height: 3px;
+ }
+
+
+/* --- Team member selector dropdown menu and button ----------------------------------- */
+.member_select {
+    display: block;
+    height: 30px;
+    width: 200px;
+    margin: 0 auto;
+    }
+
+    
+/* ------ Custom textbox  ------------------ */
+.textbox {
+    resize: none;           /* removes the ability to resize the textbox*/
+}
+
+
+/* ---------- BUTTONS -------------------------------------------------------------------- */
+
+/* Menu buttons */
+#instructbutton {
+    height: 30px;
+    width: 100px;
+    margin: 25px auto;
+}
+
+  
+
+
+input.menubutton, 
+button.menubutton, 
+input.indexreturn,
+input.custombutton, 
+input.otherbutton,
+input.exportbutton  {
+    height: 45px;
+    width: 225px;
+    /* box-shadow:inset 5px 30px 5px -10px #b54b3a; */
+    /* background-color: #a73f2d;	 */
+
+    /* box-shadow:inset 5px 30px 5px -10px #f2f564;
+    background-color: #d2d442; */
+
+    box-shadow:inset 5px 30px 5px -10px #eeeeee;
+    background-color: #cccaca;
+
+    border: 0.16em solid #ffffff00;
+    border-radius: 5px;
+    color: black;
+    font-family:'Roboto',sans-serif;
+    font-size: 15px;
+    text-shadow: black .25px 0px 0px; 
+    font-weight: 500;
+    text-decoration: none;
+    padding: 9px 23px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 1em;
+    }
+
+input.menubutton:hover, 
+button.menubutton:hover, 
+input.custombutton:hover, 
+input.otherbutton:hover {
+    /* background-color: #d4c53b; */
+    background-color: #abe79c;
+    background-color: #acacac;
+}
+
+
+input.indexreturn {
+    /* box-shadow:inset 5px 30px 5px -10px #b6b6b6;
+    background-color: #919191; */
+    box-shadow:inset 5px 30px 5px -10px #f76161;
+    background-color: #da3e3e;
+}
+
+input.indexreturn:hover {	
+    /* background-color: #c07272; */
+    background-color: #ce3333;
+}
+
+input.otherbutton {
+    box-shadow:inset 5px 30px 5px -10px #3434b9;
+	background-color: #1d1da3;
+    color: white;
+    opacity: 0.6;
+    cursor: not-allowed;
+    }
+
+input.otherbutton:hover {
+    background-color: #1d1da3;
+}
+
+input.exportbutton  {
+    height: 40px;
+    width: 175px;
+
+    box-shadow:inset 5px 30px 5px -10px #ababf0;
+    background-color: #8585dd;
+}
+
+input.exportbutton:hover {
+    background-color: #7070f0;
+}
+
+/* input.menubutton, button.menubutton {
+    float: left;
+    margin-left: 20px;
+    } */
+
+/* button.menubutton:hover, input.menubutton:hover {
+	background-color: #b34332;
+    }
+
+input.custombutton {
+    background-color: #d38b2d;
+    box-shadow:inset 5px 30px 5px -10px #ff9e44;
+}
+
+input.custombutton:hover {
+    background-color: #db9b48;
+}
+
+
+input.otherbutton {
+    box-shadow:inset 5px 30px 5px -10px #3434b9;
+	background-color: #1d1da3;
+    }
+
+input.otherbutton:hover {
+    background-color: #2727b6;
+} */
+
+/* input.otherbutton {
+    box-shadow:inset 5px 30px 5px -15px #60f343;
+	background-color: #1ebe2c;
+    }
+
+input.otherbutton:hover {
+    background-color: #57c73b;
+} */
+
+
+
+/* ---- Displayed flash alerts ------------------------------------------------- */
+.alert, .alert-success, .alert-error, .alert-info, .alert-danger {
+    padding: 20px;
+    font-size: 1.7rem;
+    text-align: center;
+    margin-bottom: 16px;
+    border-width: 2px;
+    border-style: solid;
+    font-weight: bold;
+    }
+
+.alert-success {
+    background-color: forestgreen;
+    border-color: rgb(27, 146, 11);
+    color: white;
+    }
+  
+.alert-error, .alert-danger {
+    background-color: rgb(192, 33, 33);
+    border-color: darkred;
+    color: white;
+    }
+  
+.alert-info {
+    background-color: rgb(99, 118, 201);
+    border-color: rgb(69, 84, 223);
+    color: white;
+    }
+  
